@@ -1,0 +1,196 @@
+/**
+ * DollarBets Elementor Preview Styles
+ */
+
+/* Shortcode wrapper improvements */
+.dollarbets-shortcode-wrapper {
+    position: relative;
+    min-height: 50px;
+}
+
+/* Loading state for shortcodes */
+.dollarbets-loading {
+    position: relative;
+    opacity: 0.7;
+}
+
+.dollarbets-loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #007cba;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: dollarbets-spin 1s linear infinite;
+    z-index: 1;
+}
+
+@keyframes dollarbets-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Empty shortcode placeholder */
+.dollarbets-empty-shortcode {
+    background: #f8f9fa;
+    border: 1px dashed #dee2e6;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Shortcode placeholder styles */
+.dollarbets-shortcode-placeholder {
+    background: #f8f9fa;
+    border: 2px dashed #007cba;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px 0;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shortcode-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.shortcode-name {
+    font-weight: bold;
+    color: #007cba;
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.shortcode-code {
+    font-family: 'Courier New', Courier, monospace;
+    background: #e9ecef;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 4px;
+    word-break: break-all;
+}
+
+.shortcode-note {
+    font-size: 11px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .dollarbets-shortcode-placeholder {
+        padding: 15px;
+        min-height: 80px;
+    }
+    
+    .shortcode-icon {
+        font-size: 20px;
+    }
+    
+    .shortcode-name {
+        font-size: 13px;
+    }
+    
+    .shortcode-code {
+        font-size: 11px;
+    }
+}
+
+/* Elementor editor specific styles */
+.elementor-editor-active .dollarbets-shortcode-wrapper {
+    border: 1px dashed transparent;
+    transition: border-color 0.3s;
+}
+
+.elementor-editor-active .dollarbets-shortcode-wrapper:hover {
+    border-color: #007cba;
+}
+
+/* Fix for Elementor widget spacing */
+.elementor-widget-shortcode .dollarbets-shortcode-wrapper {
+    margin: 0;
+}
+
+/* Ensure shortcode content is visible in editor */
+.elementor-editor-active .elementor-shortcode {
+    min-height: 30px;
+}
+
+/* Style for DollarBets specific shortcodes in preview */
+.elementor-shortcode [class*="dollarbets-"],
+.elementor-shortcode [id*="dollarbets-"] {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Purchase form preview styles */
+.elementor-shortcode .dollarbets-purchase-form {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+/* Header preview styles */
+.elementor-shortcode .dollarbets-header {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* Predictions preview styles */
+.elementor-shortcode .dollarbets-predictions {
+    display: grid;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+/* Bet history table preview styles */
+.elementor-shortcode .dollarbets-bet-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.elementor-shortcode .dollarbets-bet-history th,
+.elementor-shortcode .dollarbets-bet-history td {
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.elementor-shortcode .dollarbets-bet-history th {
+    background: #f8f9fa;
+    font-weight: bold;
+}
+
+/* Dark mode support for editor */
+.elementor-editor-dark .dollarbets-shortcode-placeholder {
+    background: #2a2a2a;
+    border-color: #007cba;
+    color: #fff;
+}
+
+.elementor-editor-dark .shortcode-code {
+    background: #3a3a3a;
+    color: #fff;
+}
+
+.elementor-editor-dark .shortcode-note {
+    color: #ccc;
+}
+

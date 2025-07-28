@@ -1,0 +1,132 @@
+/* === DollarBets Platform Styles === */
+.dollarbets-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.dollarbets-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Category Filter */
+.category-filter {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.category-filter button {
+  background-color: #e5e7eb;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.category-filter button.active,
+.category-filter button:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+/* Prediction Grid */
+.predictions-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* Tile Card */
+.prediction-tile {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prediction-tile h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Confidence Bar */
+.confidence-bar {
+  display: flex;
+  height: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: white;
+}
+
+.yes-bar {
+  background-color: #22c55e;
+  text-align: center;
+  line-height: 30px;
+}
+
+.no-bar {
+  background-color: #ef4444;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* Footer */
+.tile-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 0.75rem;
+}
+
+/* Actions */
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.bet-button {
+  flex: 1;
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.bet-button.yes {
+  background-color: #16a34a;
+  color: white;
+}
+
+.bet-button.no {
+  background-color: #dc2626;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .predictions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tile-footer {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
